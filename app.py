@@ -17,16 +17,20 @@ def index():
         SOAP Note for: {data['patient_name']}
         Date: {data['date_of_visit'] or datetime.today().strftime('%Y-%m-%d')}
         ----------------------------------------
-        S - Subjective:
+        Subjective:
+        
         {data['subjective']}
 
-        O - Objective:
+        Objective:
+        
         {data['objective']}
 
-        A - Assessment:
+        Assessment:
+        
         {data['assessment']}
 
-        P - Plan:
+        Plan:
+        
         {data['plan']}
         """
 
