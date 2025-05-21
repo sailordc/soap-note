@@ -15,18 +15,62 @@
         <textarea name="subjective" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
       <div>
+        {% if macros.subjective %}
+  <div class="flex flex-wrap gap-2 mt-2">
+    {% for macro in macros.subjective %}
+      <button type="button" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 text-sm"
+              onclick="insertMacro('subjective', '{{ macro.text }}')">
+        {{ macro.label }}
+      </button>
+    {% endfor %}
+  </div>
+{% endif %}
+
         <label class="block font-medium">Objective</label>
         <textarea name="objective" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
       <div>
+        {% if macros.objective %}
+  <div class="flex flex-wrap gap-2 mt-2">
+    {% for macro in macros.subjective %}
+      <button type="button" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 text-sm"
+              onclick="insertMacro('subjective', '{{ macro.text }}')">
+        {{ macro.label }}
+      </button>
+    {% endfor %}
+  </div>
+{% endif %}
+
         <label class="block font-medium">Assessment</label>
         <textarea name="assessment" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
       <div>
+        {% if macros.assessment %}
+  <div class="flex flex-wrap gap-2 mt-2">
+    {% for macro in macros.subjective %}
+      <button type="button" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 text-sm"
+              onclick="insertMacro('subjective', '{{ macro.text }}')">
+        {{ macro.label }}
+      </button>
+    {% endfor %}
+  </div>
+{% endif %}
+
         <label class="block font-medium">Plan</label>
         <textarea name="plan" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
       <div>
+        {% if macros.plan %}
+  <div class="flex flex-wrap gap-2 mt-2">
+    {% for macro in macros.subjective %}
+      <button type="button" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 text-sm"
+              onclick="insertMacro('subjective', '{{ macro.text }}')">
+        {{ macro.label }}
+      </button>
+    {% endfor %}
+  </div>
+{% endif %}
+
         <label class="block font-medium">Shockwave Therapy Parameters</label>
         <select name="shockwave" class="w-full border p-2 rounded-md">
           <option>2.5 bar, 10 Hz, 2000 shocks</option>
