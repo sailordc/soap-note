@@ -90,3 +90,13 @@
   </div>
 </body>
 </html>
+<script>
+  function insertMacro(fieldId, text) {
+    const textarea = document.getElementById(fieldId);
+    if (textarea.value.length > 0) {
+      textarea.value += '\n\n' + text;
+    } else {
+      textarea.value = text;
+    }
+  }
+</script>
