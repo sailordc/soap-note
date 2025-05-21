@@ -10,48 +10,22 @@
   <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-md">
     <h1 class="text-2xl font-bold text-center mb-6">Chiropractic SOAP Note Generator</h1>
     <form method="post" class="space-y-4">
-      <!-- Body Area Dropdown -->
-      <div>
-        <label class="block font-medium">Body Area</label>
-        <select name="body_area" class="w-full border p-2 rounded-md">
-          <option>Neck</option>
-          <option>Upper Back</option>
-          <option>Lower Back</option>
-          <option>Shoulder</option>
-          <option>Knee</option>
-          <option>Hip</option>
-        </select>
-      </div>
-
-      <!-- Subjective -->
       <div>
         <label class="block font-medium">Subjective</label>
-        <textarea id="subjective" name="subjective" rows="3" class="w-full border p-2 rounded-md"></textarea>
-        <button type="button" onclick="suggest('subjective')" class="mt-1 text-sm text-blue-600 hover:underline">Suggest Text</button>
+        <textarea name="subjective" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
-
-      <!-- Objective -->
       <div>
         <label class="block font-medium">Objective</label>
-        <textarea id="objective" name="objective" rows="3" class="w-full border p-2 rounded-md"></textarea>
-        <button type="button" onclick="suggest('objective')" class="mt-1 text-sm text-blue-600 hover:underline">Suggest Text</button>
+        <textarea name="objective" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
-
-      <!-- Assessment -->
       <div>
         <label class="block font-medium">Assessment</label>
-        <textarea id="assessment" name="assessment" rows="3" class="w-full border p-2 rounded-md"></textarea>
-        <button type="button" onclick="suggest('assessment')" class="mt-1 text-sm text-blue-600 hover:underline">Suggest Text</button>
+        <textarea name="assessment" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
-
-      <!-- Plan -->
       <div>
         <label class="block font-medium">Plan</label>
-        <textarea id="plan" name="plan" rows="3" class="w-full border p-2 rounded-md"></textarea>
-        <button type="button" onclick="suggest('plan')" class="mt-1 text-sm text-blue-600 hover:underline">Suggest Text</button>
+        <textarea name="plan" rows="3" class="w-full border p-2 rounded-md"></textarea>
       </div>
-
-      <!-- Shockwave -->
       <div>
         <label class="block font-medium">Shockwave Therapy Parameters</label>
         <select name="shockwave" class="w-full border p-2 rounded-md">
@@ -60,11 +34,15 @@
           <option>3.5 bar, 12 Hz, 2500 shocks</option>
         </select>
       </div>
-
       <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full">Generate Note</button>
     </form>
 
     {% if note %}
     <div class="mt-8 bg-gray-50 p-4 border rounded-md">
       <h2 class="text-lg font-semibold mb-2">Generated Note</h2>
-      <pre class="whitespace-pre-wrap text-sm text-gray-700">{{ not
+      <pre class="whitespace-pre-wrap text-sm text-gray-700">{{ note }}</pre>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
