@@ -38,7 +38,7 @@ def index():
             - Frequency: {data['frequency']} Hz
             - Number of Shocks: {data['shocks']}
             - Treatment Frequency: {data['treatment_freq']}
-            - Duration: Typically 4–6 sessions based on patient response
+            - Duration: Typically 6-12 sessions based on patient response and severity
             - Goals: Reduce inflammation, break down adhesions, stimulate tissue healing.
             """
 
