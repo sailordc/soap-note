@@ -1,0 +1,18 @@
+macros.json
+{
+  "subjective": [
+    { "label": "Low Back Pain", "text": "Patient reports persistent lower back pain worsened by sitting or standing. Pain level: 6/10." },
+    { "label": "Neck Stiffness", "text": "Reports neck stiffness and occasional headaches after prolonged computer use." }
+  ],
+  "objective": [
+    { "label": "Lumbar Spasm", "text": "Palpable spasm noted in the lumbar paraspinal muscles. ROM restricted in flexion." },
+    { "label": "Cervical Tension", "text": "Tenderness and tension at C5-C7, mild loss of cervical lordosis observed." }
+  ],
+  "assessment": [
+    { "label": "Chronic Strain", "text": "Chronic lumbar strain with mechanical dysfunction. Responding to conservative care." }
+  ],
+  "plan": [
+    { "label": "Spinal Adjustment", "text": "Continue spinal manipulation therapy 2x/week for 2 weeks." },
+    { "label": "Shockwave", "text": "Add shockwave therapy to affected area, 3.0 bar, 10 Hz, 2000 shocks." }
+  ]
+}
