@@ -6,17 +6,13 @@ app = Flask(__name__)
 def index():
     note = ""
     if request.method == 'POST':
-        body_area = request.form['body_area']
         subjective = request.form['subjective']
         objective = request.form['objective']
         assessment = request.form['assessment']
         plan = request.form['plan']
         shockwave = request.form['shockwave']
-
         note = f"""
         **SOAP Note**
-
-        **Body Area:** {body_area}
 
         **Subjective:** {subjective}
 
