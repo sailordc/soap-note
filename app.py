@@ -1,26 +1,19 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-import json
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     note = ""
-    with open('macros.json') as f:
-        macros = json.load(f)
-
     if request.method == 'POST':
-        body_area = request.form.get('body_area', '')
-        subjective = request.form.get('subjective', '')
-        objective = request.form.get('objective', '')
-        assessment = request.form.get('assessment', '')
-        plan = request.form.get('plan', '')
-        shockwave = request.form.get('shockwave', '')
-
+        subjective = request.form['subjective']
+        objective = request.form['objective']
+        assessment = request.form['assessment']
+        plan = request.form['plan']
+        shockwave = request.form['shockwave']
         note = f"""
         **SOAP Note**
-
-        **Body Area:** {body_area}
 
         **Subjective:** {subjective}
 
@@ -32,5 +25,8 @@ def index():
 
         **Shockwave Parameters:** {shockwave}
         """
+    return render_template('form.html', note=note)
 
-    return render_template('form.html', note=note, macros=macros)
+if __name__ == '__main__':
+    app.run(debug=True)
+
