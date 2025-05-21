@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SOAP Note Generator</title>
+</head>
+<body>
+    <h2>Chiropractic SOAP Note Generator</h2>
+    <form method="POST">
+        <label>Patient Name:</label><br>
+        <input type="text" name="patient_name" required><br><br>
+
+        <label>Date (YYYY-MM-DD):</label><br>
+        <input type="text" name="date_of_visit"><br><br>
+
+        <label>Subjective:</label><br>
+        <textarea name="subjective" required></textarea><br><br>
+
+        <label>Objective:</label><br>
+        <textarea name="objective" required></textarea><br><br>
+
+        <label>Assessment:</label><br>
+        <textarea name="assessment" required></textarea><br><br>
+
+        <label>Plan:</label><br>
+        <textarea name="plan" required></textarea><br><br>
+
+        <label>Include Shockwave Therapy?</label><br>
+        <input type="radio" name="include_shockwave" value="yes"> Yes
+        <input type="radio" name="include_shockwave" value="no" checked> No<br><br>
+
+        <label>Treatment Region:</label><br>
+        <input type="text" name="region"><br><br>
+
+        <label>Pressure (bar):</label><br>
+        <select name="pressure">
+            {% for p in pressures %}
+                <option value="{{ p }}">{{ p }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Frequency (Hz):</label><br>
+        <select name="frequency">
+            {% for f in frequencies %}
+                <option value="{{ f }}">{{ f }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Number of Shocks:</label><br>
+        <select name="shocks">
+            {% for s in shock_counts %}
+                <option value="{{ s }}">{{ s }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Treatment Frequency:</label><br>
+        <select name="treatment_freq">
+            {% for t in treatment_freqs %}
+                <option value="{{ t }}">{{ t }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Generate Note">
+    </form>
+</body>
+</html>
